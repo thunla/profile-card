@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+}
+:root{
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+    --white-color: #fff;
+    --transiton: all 0.5s linear;
+}
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 18px;
+}
+
+.container{
+   background-color: var(--dark-cyan);
+   position: relative;
+   height: 100vh;
+   overflow: hidden;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.img{
+    position: absolute;
+    width: 600px;
+}
+.img:first-child{
+    top: -10%;
+    left: -10%;
+}
+.img:nth-child(2) {
+    bottom: -10%;
+    right: -10%;
+}
+
+.card{
+    background-color: var(--white-color);
+    width: 400px;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    transition: var(--transiton);
+}
+
+.card__header{
+    background: url('/images/bg-pattern-card.svg') top center, repeat;
+    background-size: contain;
+    min-height: 150px;
+}
+
+.card__header img{
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -30%);
+    border: 5px solid var(--white-color);
+    border-radius: 50%;
+}
+.card__body{
+    margin: 80px auto 32px;
+    text-align: center;
+    transition: var(--transiton);
+}
+.card__body h1{
+    font-size: 1.5rem;
+}
+.card__body h1 span{
+    color: var(--dark-gray);
+    font-weight: 400;
+    transition: var(--transiton);
+}
+.card__body h4{
+    color: var(--dark-gray);
+    transition: var(--transiton);
+    font-weight: 400;
+}
+
+.card__footer{
+    border-top: 1px solid var(--dark-gray);
+    display: flex;
+    justify-content: space-evenly;
+    padding: 24px 0;
+    text-align: center;
+}
+.card__footer h2{
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.7rem;
+    transition: var(--transiton);
+}
+.card__footer h6{
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: var(--dark-gray);
+    transition: var(--transiton);
+}
+
+@media screen and (max-width: 767px) {
+    .card{
+        width: 90%;
+    }
+}
