@@ -78,10 +78,11 @@ body{
     font-weight: 400;
     transition: var(--transiton);
 }
-.card__body h4{
+.card__body p{
     color: var(--dark-gray);
     transition: var(--transiton);
     font-weight: 400;
+    font-size: 1.2rem;
 }
 
 .card__footer{
@@ -97,7 +98,7 @@ body{
     line-height: 1.7rem;
     transition: var(--transiton);
 }
-.card__footer h6{
+.card__footer p{
     font-size: 0.8rem;
     letter-spacing: 2px;
     color: var(--dark-gray);
